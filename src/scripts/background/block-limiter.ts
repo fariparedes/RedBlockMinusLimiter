@@ -32,10 +32,11 @@ export default class BlockLimiter {
   }
 
   public increment() {
-    const count = this.count + 1
-    localStorage.setItem(this.KEY_COUNT, count.toString())
-    localStorage.setItem(this.KEY_TIMESTAMP, Date.now().toString())
-    return count
+    return this.count
+    //const count = this.count + 1
+    //localStorage.setItem(this.KEY_COUNT, count.toString())
+    //localStorage.setItem(this.KEY_TIMESTAMP, Date.now().toString())
+    //return count
   }
 
   public check(): 'ok' | 'danger' {
